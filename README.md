@@ -5,4 +5,5 @@ This is my personal ZSH config so I won't be accepting issues. If you end up usi
 
 ## Steps to Set Up
 https://ohmyz.sh/
+
 https://github.com/sindresorhus/pure

@@ -37,13 +37,17 @@ The output should be something like `/bin/zsh`.
 
 If the output is `zsh not found` then stop here and go to [this link](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) to get `zsh` installed.
 
-### 2. Pick a default shell directory
+### 2. Install iterm2 (for MacOS)
+
+If you don't already have it installed, install [iterm2](https://iterm2.com/) and never open the bare MacOS terminal again. This is not necessarily related to this config, but if you don't already use it, it will be such a huge UX win for you.
+
+### 3. Pick a default shell directory
 
 I usually want my terminals to open to the directory that contains all my git repos. This is usually something like `~/code` or `~/work` or `~/{company_name}`. Since this is super custom, this script assumes you want to use the `$HOME`  directory (or `~`).
 
 If you wish to change this, before running this script, run `export DEFAULT_SHELL_DIR=~/code` and replace `~/code` with your preferred destination.
 
-### 3. Run the install script
+### 4. Run the install script
 
 Run the following to install the dependencies and set up the config.
 

@@ -6,7 +6,7 @@ then
     export DEFAULT_SHELL_DIR=$HOME
 fi
 
-echo "### Installing oh-my-zsh ###"
+echo "### INSTALLING OH MY ZSH ###"
 if [ -d $HOME/.oh-my-zsh ]
 then
     echo "oh-my-zsh already installed, updating instead"
@@ -16,11 +16,12 @@ else
     #   - ensure git is installed,
     #   - ensure zsh is installed,
     #   - change the default shell to zsh
+    export RUNZSH=no
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 1> /dev/null
 fi
 
 
-echo "### Installing pure ###"
+echo "### INSTALLING PURE ###"
 mkdir -p "$HOME/.zsh"
 
 echo "Existing pure installation found, removing"
@@ -31,11 +32,11 @@ fi
 
 git clone --quiet https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
-echo "### Copying custom zshrc to home directory"
+echo "### COPYING ZSHRC FILE ###"
 cp ./zshrc.txt $HOME/.zshrc
 
 sed -i '' "s,{{DEFAULT_SHELL_DIR}},$DEFAULT_SHELL_DIR,g" $HOME/.zshrc
 
-echo "### Reloading terminal ###"
+echo "### RELOADING TERMINAL ###"
 exec zsh
 

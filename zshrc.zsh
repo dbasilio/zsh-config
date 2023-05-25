@@ -1,4 +1,4 @@
-### OHMYZSH Setup ###
+### oh-my-zsh Setup ###
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

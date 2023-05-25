@@ -33,7 +33,7 @@ fi
 git clone --quiet https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
 echo "### COPYING ZSHRC FILE ###"
-cp ./zshrc.txt $HOME/.zshrc
+cp ./zshrc.zsh $HOME/.zshrc
 
 sed -i '' "s,{{DEFAULT_SHELL_DIR}},$DEFAULT_SHELL_DIR,g" $HOME/.zshrc
 

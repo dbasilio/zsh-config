@@ -38,4 +38,8 @@ prompt pure
 unsetopt share_history
 
 # Default shell directory
-cd {{DEFAULT_SHELL_DIR}}
+# It's better to let vscode navigate you when terminal is opened from vscode
+if [ -z $VSCODE_INJECTION ]
+then
+    cd {{DEFAULT_SHELL_DIR}}
+fi

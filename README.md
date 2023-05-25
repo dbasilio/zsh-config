@@ -47,6 +47,9 @@ I usually want my terminals to open to the directory that contains all my git re
 
 If you wish to change this, before running this script, run `export DEFAULT_SHELL_DIR=~/code` and replace `~/code` with your preferred destination.
 
+#### VSCode Caveat
+If a terminal is opened from VSCode, it navigates to the opened repo, which is much better UX. If a terminal is opened from VSCode, we don't change the shell directory.
+
 ### 4. Run the install script
 
 Run the following to install the dependencies and set up the config.

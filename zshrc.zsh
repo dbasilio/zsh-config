@@ -33,6 +33,11 @@ autoload -U promptinit; promptinit
 prompt pure
 
 ### Personal Settings ###
+alias gpll="git pull"
+alias gpsh="git push"
+alias gadd="git add ."
+alias grebase="git rebase $(git_main_branch)"
+alias gs="git status"
 
 # Don't share history between different terminals
 unsetopt share_history

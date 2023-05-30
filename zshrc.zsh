@@ -38,6 +38,8 @@ alias gpsh="git push"
 alias gadd="git add ."
 alias grebase="git rebase $(git_main_branch)"
 alias gs="git status"
+alias gdiff="git diff"
+alias gmerge="git merge $(git_main_branch)"
 
 # Don't share history between different terminals
 unsetopt share_history

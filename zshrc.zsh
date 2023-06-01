@@ -40,6 +40,7 @@ alias grebase='git rebase $(git_main_branch)'
 alias gs='git status'
 alias gdiff='git diff'
 alias gmerge='git merge $(git_main_branch)'
+alias greset='git reset --hard'
 
 # Don't share history between different terminals
 unsetopt share_history
@@ -50,3 +51,5 @@ if [ -z $VSCODE_INJECTION ]
 then
     cd {{DEFAULT_SHELL_DIR}}
 fi
+
+nvm use default 1> /dev/null

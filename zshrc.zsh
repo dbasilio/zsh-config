@@ -36,11 +36,15 @@ prompt pure
 alias gpll='git pull'
 alias gpsh='git push'
 alias gadd='git add .'
-alias grebase='git rebase $(git_main_branch)'
+alias grb='git rebase'
+alias grbm='git rebase $(git_main_branch)'
 alias gs='git status'
-alias gdiff='git diff'
-alias gmerge='git merge $(git_main_branch)'
+alias gdff='git diff'
+alias gmrg='git merge'
+alias gmrgm='git merge $(git_main_branch)'
 alias greset='git reset --hard'
+alias gstsh='git stash push'
+alias gstp='git stash pop'
 
 # Don't share history between different terminals
 unsetopt share_history

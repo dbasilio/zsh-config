@@ -56,4 +56,10 @@ then
     cd {{DEFAULT_SHELL_DIR}}
 fi
 
+which difft 1> /dev/null
+difftastic_installed=$?
+if [[ $difftastic_installed -eq 0 ]]; then
+    git config --global diff.external difft
+fi
+
 nvm use default 1> /dev/null

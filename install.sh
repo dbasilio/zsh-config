@@ -37,6 +37,25 @@ cp ./zshrc.zsh $HOME/.zshrc
 
 sed -i '' "s,{{DEFAULT_SHELL_DIR}},$DEFAULT_SHELL_DIR,g" $HOME/.zshrc
 
+echo "### Installing Difftastic ###"
+
+which difft 1> /dev/null
+difftastic_installed=$?
+if [[ $difftastic_installed -ne 0 ]]; then
+    echo "difftastic not installed, checking for brew"
+
+    which brew 1> /dev/null
+    brew_installed=$?
+    if [[ $brew_installed -eq 0 ]]; then
+        echo "Brew installed, installing difftastic"
+        brew install --quiet difftastic
+    else
+        echo "Brew not installed, difftastic was not installed"
+    fi
+else
+    echo "difftastic already installed, skipping"
+fi
+
 echo "### RELOADING TERMINAL ###"
 exec zsh
 
